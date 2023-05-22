@@ -1,0 +1,19 @@
+@use "_reset";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+
+// fonts
+$ft-jakarta: "Plus Jakarta Sans";
+$ft-500: 500;
+$ft-800: 800;
+
+// Colors
+$clr-red: hsl(1, 90%, 64%);
+$clr-blue: hsl(219, 85%, 26%);
+$clr-white: hsl(0, 0%, 100%);
+$clr-very-light-gray-blue: hsl(210, 60%, 98%);
+$clr-light-gray-blue-1: hsl(211, 68%, 94%);
+$clr-light-gray-blue-2: hsl(205, 33%, 90%);
+$clr-gray-blue: hsl(219, 14%, 63%);
+$clr-dark-gray-blue: hsl(219, 12%, 42%);
+$clr-very-dark-gray-blue: hsl(224, 21%, 14%);
