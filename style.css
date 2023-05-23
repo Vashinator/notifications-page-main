@@ -53,11 +53,57 @@ h6 {
   isolation: isolate;
 }
 
+body {
+  font-family: "Plus Jakarta Sans";
+}
+
+.header {
+  margin-block: 2rem;
+  margin-inline: 1rem;
+}
+.header--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__heading {
+  font-size: 1.25rem;
+}
+.header__unread {
+  padding: 0.5rem 1rem;
+  background-color: hsl(219, 85%, 26%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+.header__mark-read {
+  text-decoration: none;
+  color: hsl(219, 14%, 63%);
+}
+
 .main {
   color: hsl(219, 12%, 42%);
+  margin: 0 auto;
+  font-size: 0.9rem;
+}
+.main--flex {
+  display: flex;
+  flex-direction: column;
+}
+.main__div {
+  justify-content: flex-start;
+  margin-inline: 2rem;
+  margin-bottom: 2rem;
 }
 .main__link {
   text-decoration: none;
+}
+.main__img {
+  display: inline-block;
+  height: 2rem;
+}
+.main__pm {
+  margin-top: 2rem;
+  margin-inline: 4rem;
 }
 
 /* Attributions */

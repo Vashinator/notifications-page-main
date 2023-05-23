@@ -1,6 +1,21 @@
 @use "_reset";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Plus+Jakarta+Sans:wght@500;800&display=swap');
 
+$font-scale: 1.250;
+$font-size: 1rem;
+
+@function font-size($size) {
+    $multiplier: 1;
+
+    @for $i from 1 through $size {
+        $multiplier: $multipler * $font-scale;
+    }
+
+    $value: calc(#{font-size} * #{$multipler});
+
+    @return $value;
+}
+
 
 // fonts
 $ft-jakarta: "Plus Jakarta Sans";
@@ -18,15 +33,74 @@ $clr-gray-blue: hsl(219, 14%, 63%);
 $clr-dark-gray-blue: hsl(219, 12%, 42%);
 $clr-very-dark-gray-blue: hsl(224, 21%, 14%);
 
+body {
+    font-family: $ft-jakarta;
+}
+
+.header {
+    margin-block: 2rem;
+    margin-inline: 1rem;
+
+    &--flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__heading {
+        font-size: 1.25rem;
+    }
+
+    &__unread {
+        padding: .5rem 1rem;
+        background-color: $clr-blue;
+        color: $clr-white;
+        border-radius: 10px;
+    }
+
+    &__mark-read {
+        text-decoration: none;
+        color: $clr-gray-blue;
+    }
+}
 
 .main {
     color: $clr-dark-gray-blue;
+    margin: 0 auto;
+    // max-width: 80%;
+    font-size: .9rem;
+
+    &--flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__div {
+        // display: flex;
+        justify-content: flex-start;
+        margin-inline: 2rem;
+        margin-bottom: 2rem;
+    }
 
     &__link {
         text-decoration: none;
     }
 
+    &__img {
+        display: inline-block;
+        // margin: 1rem;
+        height: 2rem;
+    }
+
+    &__pm {
+        margin-top: 2rem;
+        margin-inline: 4rem;
+    }
+
+
+
 }
+
 
 
 
