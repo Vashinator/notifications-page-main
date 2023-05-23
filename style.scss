@@ -17,3 +17,27 @@ $clr-light-gray-blue-2: hsl(205, 33%, 90%);
 $clr-gray-blue: hsl(219, 14%, 63%);
 $clr-dark-gray-blue: hsl(219, 12%, 42%);
 $clr-very-dark-gray-blue: hsl(224, 21%, 14%);
+
+
+.main {
+    color: $clr-dark-gray-blue;
+
+    &__link {
+        text-decoration: none;
+    }
+
+}
+
+
+
+
+/* Attributions */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

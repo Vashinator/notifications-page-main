@@ -51,4 +51,21 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+.main {
+  color: hsl(219, 12%, 42%);
+}
+.main__link {
+  text-decoration: none;
+}
+
+/* Attributions */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }/*# sourceMappingURL=style.css.map */
