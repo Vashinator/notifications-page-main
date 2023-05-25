@@ -66,20 +66,29 @@ body {
 
 .main {
     color: $clr-dark-gray-blue;
-    margin: 0 auto;
+    margin-left: 3rem;
     // max-width: 80%;
     font-size: .9rem;
 
-    &--flex {
-        display: flex;
-        flex-direction: column;
-    }
+    // &--grid {
+    //     display: grid;
+    //     justify-content: center;
+    // }
+
+    // &--flex {
+    //     display: flex;
+    //     justify-content: center;
+    //     flex-direction: column;
+    //     align-items: flex-start;
+    // }
 
     &__div {
         // display: flex;
         justify-content: flex-start;
+        flex-wrap: wrap;
         margin-inline: 2rem;
         margin-bottom: 2rem;
+
     }
 
     &__link {
@@ -90,12 +99,22 @@ body {
         display: inline-block;
         // margin: 1rem;
         height: 2rem;
+        position: relative;
+        left: -3rem;
+        top: 2.5rem;
+    }
+
+    &__img--square {
+        position: relative;
+        top: -1rem;
+        // right: left ;
     }
 
     &__pm {
         margin-top: 2rem;
         margin-inline: 4rem;
     }
+
 
 
 

@@ -82,15 +82,12 @@ body {
 
 .main {
   color: hsl(219, 12%, 42%);
-  margin: 0 auto;
+  margin-left: 3rem;
   font-size: 0.9rem;
-}
-.main--flex {
-  display: flex;
-  flex-direction: column;
 }
 .main__div {
   justify-content: flex-start;
+  flex-wrap: wrap;
   margin-inline: 2rem;
   margin-bottom: 2rem;
 }
@@ -100,6 +97,13 @@ body {
 .main__img {
   display: inline-block;
   height: 2rem;
+  position: relative;
+  left: -3rem;
+  top: 2.5rem;
+}
+.main__img--square {
+  position: relative;
+  top: -1rem;
 }
 .main__pm {
   margin-top: 2rem;
