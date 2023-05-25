@@ -70,9 +70,10 @@ body {
   font-size: 1.25rem;
 }
 .header__unread {
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   background-color: hsl(219, 85%, 26%);
   color: hsl(0, 0%, 100%);
+  margin-left: 0.5rem;
   border-radius: 10px;
 }
 .header__mark-read {
@@ -83,6 +84,9 @@ body {
 .main {
   color: hsl(219, 12%, 42%);
   margin-left: 3rem;
+  margin-inline: auto;
+  text-align: left;
+  max-width: 80%;
   font-size: 0.9rem;
 }
 .main__div {
@@ -102,13 +106,28 @@ body {
   top: 2.5rem;
 }
 .main__img--square {
-  position: static;
+  position: relative;
+  left: auto;
+  right: -16rem;
+  top: -2.5rem;
 }
 .main__pm {
   margin-top: 2rem;
   margin-inline: 1.5rem;
 }
-.main__unread--sr-only {
+.main__notification[data-unread=true]::after {
+  content: "";
+  display: inline-block;
+  background-color: hsl(1, 90%, 64%);
+  padding: 0.25rem;
+  aspect-ratio: 1;
+  max-width: 0.25rem;
+  max-height: 0.25rem;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -118,18 +137,12 @@ body {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-.main__notification[data-unread=true]::after {
-  content: "";
-  background-color: hsl(1, 90%, 64%);
-  padding: 0.25rem;
-  aspect-ratio: 1;
-  max-width: 0.25rem;
-  max-height: 0.25rem;
-  border-radius: 50%;
-  display: inline-block;
-  margin-left: 0.5rem;
-}
 
+@media screen and (min-width: 792px) {
+  .main {
+    max-width: 40%;
+  }
+}
 /* Attributions */
 .attribution {
   font-size: 11px;
