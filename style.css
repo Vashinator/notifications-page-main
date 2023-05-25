@@ -95,19 +95,39 @@ body {
   text-decoration: none;
 }
 .main__img {
-  display: inline-block;
+  display: block;
   height: 2rem;
   position: relative;
   left: -3rem;
   top: 2.5rem;
 }
 .main__img--square {
-  position: relative;
-  top: -1rem;
+  position: static;
 }
 .main__pm {
   margin-top: 2rem;
-  margin-inline: 4rem;
+  margin-inline: 1.5rem;
+}
+.main__unread--sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.main__notification[data-unread=true]::after {
+  content: "";
+  background-color: hsl(1, 90%, 64%);
+  padding: 0.25rem;
+  aspect-ratio: 1;
+  max-width: 0.25rem;
+  max-height: 0.25rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 0.5rem;
 }
 
 /* Attributions */

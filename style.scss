@@ -16,6 +16,16 @@ $font-size: 1rem;
     @return $value;
 }
 
+@mixin sr-only() {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
 
 // fonts
 $ft-jakarta: "Plus Jakarta Sans";
@@ -96,7 +106,7 @@ body {
     }
 
     &__img {
-        display: inline-block;
+        display: block;
         // margin: 1rem;
         height: 2rem;
         position: relative;
@@ -105,16 +115,36 @@ body {
     }
 
     &__img--square {
-        position: relative;
-        top: -1rem;
-        // right: left ;
+        // position: relative;
+        // top: -1rem;
+        position: static;
     }
 
     &__pm {
         margin-top: 2rem;
-        margin-inline: 4rem;
+        margin-inline: 1.5rem;
     }
 
+    &__notification {
+        // display: inline-block;
+    }
+
+    &__unread--sr-only {
+        @include sr-only()
+    }
+
+    &__notification[data-unread="true"]::after {
+        content: "";
+        background-color: $clr-red;
+        padding: .25rem;
+        aspect-ratio: 1;
+        max-width: .25rem;
+        max-height: .25rem;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: .5rem;
+        // border: 1px solid $clr-red;
+    }
 
 
 
