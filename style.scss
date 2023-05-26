@@ -134,8 +134,11 @@ body {
         // display: inline-block;
     }
 
-    &__notification[data-unread="true"]::after {
-        content: "";
+    &__dot[data-unread='false'] {
+        display: none
+    }
+
+    &__dot[data-unread='true'] {
         display: inline-block;
         background-color: $clr-red;
         padding: .25rem;
@@ -146,6 +149,8 @@ body {
         margin-left: .5rem;
         // border: 1px solid $clr-red;
     }
+
+
 
 
 

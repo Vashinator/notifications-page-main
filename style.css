@@ -115,8 +115,10 @@ body {
   margin-top: 2rem;
   margin-inline: 1.5rem;
 }
-.main__notification[data-unread=true]::after {
-  content: "";
+.main__dot[data-unread=false] {
+  display: none;
+}
+.main__dot[data-unread=true] {
   display: inline-block;
   background-color: hsl(1, 90%, 64%);
   padding: 0.25rem;
