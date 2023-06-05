@@ -108,6 +108,16 @@ body {
         text-decoration: none;
     }
 
+    &__link--black {
+        color: $clr-very-dark-gray-blue;
+        font-weight: $ft-800;
+    }
+
+    &__link--blue {
+        color: $clr-blue;
+        font-weight: $ft-500;
+    }
+
     &__img {
         display: block;
         // margin: 1rem;

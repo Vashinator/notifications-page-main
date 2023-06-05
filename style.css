@@ -98,6 +98,14 @@ body {
 .main__link {
   text-decoration: none;
 }
+.main__link--black {
+  color: hsl(224, 21%, 14%);
+  font-weight: 800;
+}
+.main__link--blue {
+  color: hsl(219, 85%, 26%);
+  font-weight: 500;
+}
 .main__img {
   display: block;
   height: 2rem;
